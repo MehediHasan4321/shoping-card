@@ -1,0 +1,9 @@
+#slider{
+    width: 0;
+    height: 90vh;
+    background-color: #ccc;
+    right: 0;
+    top: 0;
+    position: fixed;
+    transition: .5s;
+}
