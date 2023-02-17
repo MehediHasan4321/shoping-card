@@ -1,9 +1,29 @@
 #slider{
     width: 0;
-    height: 90vh;
+    height: auto;
     background-color: #ccc;
     right: 0;
     top: 0;
     position: fixed;
     transition: .5s;
+    
+    
 }
+#slider button{
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    background-color: skyblue;
+    
+    bottom: 0;
+    margin-top: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+.ol-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 24px;
+    text-align: center;
+    }

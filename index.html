@@ -24,24 +24,46 @@
                 <a href="#">About</a>
             </div>
             <div>
-                <a id="shoping-icon" class="text-3xl text-sky-400" href="#">
-                    <i class="  fa-solid fa-cart-shopping"></i></a>
+                <a id="shoping-icon" class="relative text-3xl text-sky-400" href="#">
+                    <i class="  fa-solid fa-cart-shopping"></i>
+                </a>
+                <p class="absolute top-2 text-red-400 rounded-full p-1">10</p>
             </div>
         </div>
         <!-- slider is here -->
         <div id="slider">
             <div class="text-4xl text-black p-4 " id="crose-icon"><i class="fa-solid fa-xmark"></i></div>
-            <div>
-                <ul class="flex justify-between px-4 ">
-                    <li class=" text-xl"> Name</li>
-                    <li class=" text-xl"> Price</li>
-                    <li class=" text-xl"> Quentity</li>
-                    <li class=" text-xl"> Total</li>
-                </ul>
+            <div id="parent">
+                <ol class="flex justify-between px-8">
+                    <li>No</li>
+                    <li>Name</li>
+                    <li>Price</li>
+                    <li>Quentity</li>
+                    <li>Total</li>
+                </ol>
             </div>
+            <div class="space-y-4 mt-12">
+                <hr>
+                <div class="flex justify-between items-center text-xl font-semibold px-8">
+                    <h1 class="">Total : </h1>
+                    <h1>00</h1>
+                </div>
+                <hr>
+                <div class="flex justify-between items-center text-xl font-semibold px-8">
+                    <h1>Taxt Amount</h1>
+                    <h1>00</h1>
+                </div>
+                <hr>
+                <div class="flex justify-between items-center text-xl font-semibold px-8">
+                    <h1>Total Payable Amount </h1>
+                    <h1>0000</h1>
+                </div>
+            </div>
+
+            <button>Conform Order</button>
         </div>
         <div>
-            <img class="w-full h-[50vh] bg-cover" src="./images/img-5.jpg" alt="">
+            <img class="w-full h-[50vh] bg-cover" src="./images/banner.jpg" alt="">
         </div>
     </header>
     <main class="px-48 my-16 mt-16">
@@ -50,11 +72,13 @@
             <div class="w-[350px] h-[470px] bg-sky-200 rounded-md">
                 <img class="w-full h-48" src="/images/p-1.jfif" alt="">
                 <div class=" space-y-4 text-center p-4">
-                    <h1 class="text-2xl font-semibold ">Product-1</h1>
+                    <h1 id="card-1-heading" class="text-2xl font-semibold ">Product-1</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa veritatis placeat quaerat ea
                         corporis explicabo!</p>
-                    <h2 class="text-4xl font-semibold">$<span>150</span></h2>
-                    <button class="w-full bg-amber-300 py-2 text-lg text-white rounded hover:bg-amber-400">Add To Cart</button>
+                    <h2 class="text-4xl font-semibold">$<span id="card-1-price">150</span></h2>
+                    <button id="card-one"
+                        class="w-full bg-amber-300 py-2 text-lg text-white rounded hover:bg-amber-400">Add To
+                        Cart</button>
                 </div>
             </div>
 
@@ -65,7 +89,8 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus ipsa, non at libero voluptas
                         numquam?</p>
                     <h2 class="text-4xl font-semibold">$<span>99</span></h2>
-                    <button class="bg-amber-300 py-2 w-full rounded text-lg hover:bg-amber-400 text-white">Add To Cart</button>
+                    <button class="bg-amber-300 py-2 w-full rounded text-lg hover:bg-amber-400 text-white">Add To
+                        Cart</button>
                 </div>
             </div>
             <div class="w-[350px] h-[470px] p-1 bg-sky-200 rounded-md">
@@ -75,7 +100,8 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, molestias dolorum atque dicta non
                         quibusdam!</p>
                     <h2 class="text-4xl font-semibold">$<span>299</span></h2>
-                    <button class="bg-amber-300 py-2 rounded text-lg text-white hover:bg-amber-400 w-full">Add To Cart</button>
+                    <button class="bg-amber-300 py-2 rounded text-lg text-white hover:bg-amber-400 w-full">Add To
+                        Cart</button>
                 </div>
             </div>
             <div class="w-[350px] h-[470px] p-1 bg-sky-200 rounded-md">
@@ -85,7 +111,8 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi magnam velit quam atque est aut.
                     </p>
                     <h2 class="text-4xl font-semibold ">$<span>64</span></h2>
-                    <button class="bg-amber-300 py-2 w-full text-lg text-white hover:bg-amber-400 rounded">Add To Cart</button>
+                    <button class="bg-amber-300 py-2 w-full text-lg text-white hover:bg-amber-400 rounded">Add To
+                        Cart</button>
                 </div>
             </div>
 
