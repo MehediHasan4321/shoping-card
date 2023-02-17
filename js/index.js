@@ -1,3 +1,7 @@
+//Global variable......
+let serialNumber = 0;
+
+
 document.getElementById("shoping-icon").addEventListener("click",()=>{
     document.getElementById("slider").style.width = `550px`
 })
@@ -6,14 +10,51 @@ document.getElementById("crose-icon").addEventListener("click",()=>{
 })
 
 
-document.getElementById("card-one").addEventListener("click",()=>{
+//document.getElementById("total-item").innerText= serialNumber
+
+
+
+
+
+document.getElementById("card-one").addEventListener("click",(e)=>{
     const productHeading =getInnerText("card-1-heading")
     const productPrice = getInnerText("card-1-price")
     const productQuentity = 1;
     const totalPrice = parseInt(productPrice) * productQuentity;
     vouser(productHeading,productPrice,productQuentity,totalPrice)
+    sumOfTotalPrice(totalPrice)
+    
+    
 })
-
+document.getElementById("card-two").addEventListener("click",()=>{
+    serialNumber +=1
+    const productHeading = getInnerText("card-2-heading")
+    const productPrice = getInnerText("product-2-price");
+    const productQuentity = 2;
+    const totalPrice = parseInt(productPrice) * productQuentity; 
+    vouser(productHeading,productPrice,productQuentity,totalPrice)
+    sumOfTotalPrice(totalPrice)
+    
+})
+document.getElementById("card-three").addEventListener("click",()=>{
+    const productHeading = getInnerText("card-3-heading")
+    const productPrice = getInnerText("card-3-price");
+    const productQuentity = 2;
+    const totalPrice = parseInt(productPrice) * productQuentity;
+    vouser(productHeading,productPrice,productQuentity,totalPrice)
+    sumOfTotalPrice(totalPrice)
+    serialNumber +=1
+    
+})
+document.getElementById("card-four").addEventListener("click",()=>{
+    const productHeading = getInnerText("card-4-heading")
+    const productPrice = getInnerText("card-4-price");
+    const productQuentity = 2;
+    const totalPrice = parseInt(productPrice) * productQuentity;
+    vouser(productHeading,productPrice,productQuentity,totalPrice)
+    sumOfTotalPrice(totalPrice)
+    serialNumber +=1
+})
 function vouser(productHeading,productPrice,productQuentity,totalPrice){
     const ol = document.createElement("ol");
     ol.innerHTML = `
@@ -31,3 +72,12 @@ function getInnerText (id){
 
     return elementText
 }
+
+function sumOfTotalPrice(newAmount){
+    const prevValue = getInnerText("total");
+    const currentTotol = newAmount + parseInt(prevValue)
+    document.getElementById("total").innerText = currentTotol;
+}
+
+
+console.log(serialNumber)

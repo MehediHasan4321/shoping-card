@@ -27,7 +27,7 @@
                 <a id="shoping-icon" class="relative text-3xl text-sky-400" href="#">
                     <i class="  fa-solid fa-cart-shopping"></i>
                 </a>
-                <p class="absolute top-2 text-red-400 rounded-full p-1">10</p>
+                <p id="total-item" class="absolute top-2 text-red-400 rounded-full p-1">0</p>
             </div>
         </div>
         <!-- slider is here -->
@@ -46,17 +46,17 @@
                 <hr>
                 <div class="flex justify-between items-center text-xl font-semibold px-8">
                     <h1 class="">Total : </h1>
-                    <h1>00</h1>
+                    <h1>$<span id="total">00</span></h1>
                 </div>
                 <hr>
                 <div class="flex justify-between items-center text-xl font-semibold px-8">
-                    <h1>Taxt Amount</h1>
-                    <h1>00</h1>
+                    <h1>Shiping Cost</h1>
+                    <h1>$<span id="shiping-cost">00</span></h1>
                 </div>
                 <hr>
                 <div class="flex justify-between items-center text-xl font-semibold px-8">
                     <h1>Total Payable Amount </h1>
-                    <h1>0000</h1>
+                    <h1>$<span id="payable-amount">000</span></h1>
                 </div>
             </div>
 
@@ -81,36 +81,37 @@
                         Cart</button>
                 </div>
             </div>
-
+            <!-- card no 2 -->
             <div class="w-[350px] h-[470px] p-1  bg-sky-200 rounded-md">
                 <img class="w-full h-48" src="./images/p-2.webp" alt="">
-                <div class="space-y-4 p-4 text-center">
-                    <h1 class="text-2xl font-semibold">Product-2</h1>
+                <div id="card-two" class="space-y-4 p-4 text-center">
+                    <h1 id="card-2-heading" class="text-2xl font-semibold">Product-2</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus ipsa, non at libero voluptas
                         numquam?</p>
-                    <h2 class="text-4xl font-semibold">$<span>99</span></h2>
+                    <h2 class="text-4xl font-semibold">$<span id="product-2-price">99</span></h2>
                     <button class="bg-amber-300 py-2 w-full rounded text-lg hover:bg-amber-400 text-white">Add To
                         Cart</button>
                 </div>
             </div>
+            <!-- card no 3 -->
             <div class="w-[350px] h-[470px] p-1 bg-sky-200 rounded-md">
                 <img class="w-full h-48" src="./images/p-3.jpg" alt="">
-                <div class="space-y-4 p-4 text-center">
-                    <h1 class="text-2xl font-semibold">Product-3</h1>
+                <div id="card-three" class="space-y-4 p-4 text-center">
+                    <h1 id="card-3-heading" class="text-2xl font-semibold">Product-3</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, molestias dolorum atque dicta non
                         quibusdam!</p>
-                    <h2 class="text-4xl font-semibold">$<span>299</span></h2>
+                    <h2 class="text-4xl font-semibold">$<span id="card-3-price">299</span></h2>
                     <button class="bg-amber-300 py-2 rounded text-lg text-white hover:bg-amber-400 w-full">Add To
                         Cart</button>
                 </div>
             </div>
             <div class="w-[350px] h-[470px] p-1 bg-sky-200 rounded-md">
                 <img class="w-full h-48" src="./images/p-4.jpg" alt="">
-                <div class=" space-y-4 p-4 text-center">
-                    <h1 class="text-2xl font-semibold">Product-4</h1>
+                <div id="card-four" class=" space-y-4 p-4 text-center">
+                    <h1 id="card-4-heading" class="text-2xl font-semibold">Product-4</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi magnam velit quam atque est aut.
                     </p>
-                    <h2 class="text-4xl font-semibold ">$<span>64</span></h2>
+                    <h2 class="text-4xl font-semibold ">$<span id="card-4-price">64</span></h2>
                     <button class="bg-amber-300 py-2 w-full text-lg text-white hover:bg-amber-400 rounded">Add To
                         Cart</button>
                 </div>
