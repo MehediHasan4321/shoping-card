@@ -1,5 +1,5 @@
 //Global variable......
-let serialNumber = 0;
+var num = 0;
 
 
 document.getElementById("shoping-icon").addEventListener("click",()=>{
@@ -27,13 +27,14 @@ document.getElementById("card-one").addEventListener("click",(e)=>{
     
 })
 document.getElementById("card-two").addEventListener("click",()=>{
-    serialNumber +=1
+   
     const productHeading = getInnerText("card-2-heading")
     const productPrice = getInnerText("product-2-price");
     const productQuentity = 2;
     const totalPrice = parseInt(productPrice) * productQuentity; 
     vouser(productHeading,productPrice,productQuentity,totalPrice)
     sumOfTotalPrice(totalPrice)
+
     
 })
 document.getElementById("card-three").addEventListener("click",()=>{
@@ -43,7 +44,7 @@ document.getElementById("card-three").addEventListener("click",()=>{
     const totalPrice = parseInt(productPrice) * productQuentity;
     vouser(productHeading,productPrice,productQuentity,totalPrice)
     sumOfTotalPrice(totalPrice)
-    serialNumber +=1
+  
     
 })
 document.getElementById("card-four").addEventListener("click",()=>{
@@ -53,18 +54,22 @@ document.getElementById("card-four").addEventListener("click",()=>{
     const totalPrice = parseInt(productPrice) * productQuentity;
     vouser(productHeading,productPrice,productQuentity,totalPrice)
     sumOfTotalPrice(totalPrice)
-    serialNumber +=1
+ 
+    
 })
+let serialNumber = 0
 function vouser(productHeading,productPrice,productQuentity,totalPrice){
+    serialNumber ++
     const ol = document.createElement("ol");
     ol.innerHTML = `
-    <li>${1}</li>
+    <li>${serialNumber}</li>
     <li class="text-lg font-semibold">${productHeading}</li>
     <li>${productPrice}</li>
     <li>${productQuentity}</li>
     <li>${totalPrice}</li>`
     ol.classList.add("ol-list")
     document.getElementById("parent").appendChild(ol)
+    document.getElementById("total-item").innerText = serialNumber
 }
 
 function getInnerText (id){
@@ -80,4 +85,3 @@ function sumOfTotalPrice(newAmount){
 }
 
 
-console.log(serialNumber)
